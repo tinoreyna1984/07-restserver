@@ -2,6 +2,7 @@ const { request, response } = require("express");
 const bcryptjs = require('bcryptjs');
 
 const Usuario = require("../models/usuario");
+const { validarJWT } = require("../middlewares/validar-jwt");
 
 const usuariosGet = async (req = request, res = response) => {
 

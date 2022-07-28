@@ -35,7 +35,8 @@ const UsuarioSchema = Schema({
 
 // remover version del documento y password
 UsuarioSchema.methods.toJSON = function() {
-    const {__v, password, ...usuario } = this.toObject();
+    const {__v, password, _id, ...usuario } = this.toObject();
+    usuario.uid = _id; // es solo un cambio de nombre
     return usuario;
 }
 
