@@ -32,10 +32,11 @@
       function handleCredentialResponse(response) {
         const body = { id_token: response.credential };
 
-        const local = 'http://localhost:8080';
-        const host = 'https://zero7-restserver-tr.onrender.com';
-        
-        fetch(host + "/api/auth/google", {
+        const url = ( window.location.hostname.includes('localhost') )
+                    ? 'http://localhost:8080'
+                    : 'https://restserver-curso-fher.herokuapp.com';
+
+        fetch(url + "/api/auth/google", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
