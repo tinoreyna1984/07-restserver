@@ -32,8 +32,8 @@
       function handleCredentialResponse(response) {
         const body = { id_token: response.credential };
 
-        const local = process.env.LOCALHOST;
-        const host = process.env.HOST;
+        const local = 'http://localhost:8080/';
+        const host = 'https://zero7-restserver-tr.onrender.com/';
         
         fetch(host + "/api/auth/google", {
           method: "POST",
