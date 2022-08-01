@@ -31,8 +31,11 @@
     <script>
       function handleCredentialResponse(response) {
         const body = { id_token: response.credential };
+
+        const local = process.env.LOCALHOST;
+        const host = process.env.HOST;
         
-        fetch("http://localhost:8080/api/auth/google", {
+        fetch(host + "/api/auth/google", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
