@@ -32,7 +32,7 @@
       function handleCredentialResponse(response) {
         const body = { id_token: response.credential };
 
-        console.log("localhost: ", window.location.hostname.includes('localhost'));
+        console.log("host: ", window.location.hostname.includes('localhost') ? 'local' : 'remote');
 
         const url = ( window.location.hostname.includes('localhost') )
                     ? 'http://localhost:8080'
