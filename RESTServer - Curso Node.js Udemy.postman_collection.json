@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "d2647389-e51d-4bf2-9b57-6e4d98b8f417",
+		"name": "RESTServer - Curso Node.js Udemy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4381878"
+	},
+	"item": [
+		{
+			"name": "Local - USERS - GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/usuarios?limite=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios"
+					],
+					"query": [
+						{
+							"key": "limite",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local - USERS - DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuarios/62de44fd498cc4a803eb3d13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"62de44fd498cc4a803eb3d13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local - USERS - PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"test16\",\r\n    \"google\": true,\r\n    \"nuevoCampo\": true,\r\n    \"correo\": \"test16@correo.com\",\r\n    \"password\": \"123456\",\r\n    \"estado\": true,\r\n    \"rol\": \"USER_ROLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuarios/62de52559ac7e54456b8e691",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"62de52559ac7e54456b8e691"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remote - USERS - GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://zero7-restserver-tr.onrender.com/api/usuarios",
+					"protocol": "https",
+					"host": [
+						"zero7-restserver-tr",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remote - USERS - PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"62de52559ac7e54456b8e691\",\r\n    \"nombre\": \"test16\",\r\n    \"correo\": \"test16@correo.com\",\r\n    \"rol\": \"USER_ROLE\",\r\n    \"estado\": true,\r\n    \"google\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://zero7-restserver-tr.onrender.com/api/usuarios/62de52559ac7e54456b8e691",
+					"protocol": "https",
+					"host": [
+						"zero7-restserver-tr",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"usuarios",
+						"62de52559ac7e54456b8e691"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remote - USERS - DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://zero7-restserver-tr.onrender.com/api/usuarios/62de52559ac7e54456b8e691",
+					"protocol": "https",
+					"host": [
+						"zero7-restserver-tr",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"usuarios",
+						"62de52559ac7e54456b8e691"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local - AUTH - login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\" : \"test1@correo.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

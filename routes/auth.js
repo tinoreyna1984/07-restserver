@@ -5,14 +5,19 @@ const { validarCampos } = require("../middlewares/validar-campos");
 
 const router = Router();
 
-router.post(
-  "/login",
-  [
+/**
+ * Nota: cada método (GET, POST, PUT, DELETE, etc) de la clase Router
+ * debe incluir: path, middlewares y controlador
+ */
+
+router.post( // método
+  "/login", // path
+  [    // middlewares
     check("correo", "El correo es obligatorio").isEmail(),
     check("password", "El password es obligatorio").not().isEmpty(),
     validarCampos,
   ],
-  login
+  login // controller
 );
 
 router.post(
